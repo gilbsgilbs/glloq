@@ -9,7 +9,7 @@ import (
 
 func TestCli(t *testing.T) {
 	env := []string{
-		"GLLOQ_POLL_DELAY=1",
+		"GLLOQ_POLL_DELAY=100",
 		"GLLOQ_TIMEOUT=5",
 	}
 
@@ -24,7 +24,7 @@ func TestCli(t *testing.T) {
 		go func() {
 			if _, err := cmd.RunGlloq(
 				append(env, "GLLOQ_KEY="+key),
-				[]string{"sleep", "5"},
+				[]string{"sleep", "10"},
 			); err != nil {
 				panic(err)
 			}
