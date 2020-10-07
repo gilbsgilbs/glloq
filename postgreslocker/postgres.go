@@ -53,7 +53,7 @@ func (l *Locker) WithLock(
 			ctx,
 			"INSERT INTO "+quotedTableName+"(key) "+
 				"VALUES ($1) "+
-				"ON CONFLICT ON CONSTRAINT glloq_pk DO NOTHING;",
+				"ON CONFLICT DO NOTHING;",
 			opts.Key,
 		); err != nil {
 			return l.wrapError(err)
