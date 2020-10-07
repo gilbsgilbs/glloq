@@ -59,7 +59,7 @@ jobs:
       # Quotes for "-coverprofile=cover.out" are required for Windows because of the "." in the argument name.
       run: go test -v -covermode=atomic "-coverprofile=profile.cov" ./...
       env:
-        POSTGRES_DSN: postgres://glloq_user:glloq_password@localhost:5432/glloq
+        POSTGRES_DSN: postgres://glloq_user:glloq_password@localhost:5432/glloq?sslmode=disable
         MYSQL_DSN: mysql://glloq_user:glloq_password@localhost:3306/glloq
 
     - name: Send coverage
