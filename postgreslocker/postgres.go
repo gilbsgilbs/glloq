@@ -43,10 +43,7 @@ func (l *Locker) WithLock(
 	// can't use an advisory lock because CockroachDB doesn't support them.
 	if _, err := db.ExecContext(
 		ctx,
-		"CREATE TABLE IF NOT EXISTS "+quotedTableName+"("+
-			"	key text,"+
-			"	CONSTRAINT glloq_pk PRIMARY KEY(key)"+
-			");",
+		"CREATE TABLE IF NOT EXISTS "+quotedTableName+" (key text primary key);",
 	); err != nil {
 		return l.wrapError(err)
 	}
