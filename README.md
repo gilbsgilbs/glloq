@@ -1,3 +1,8 @@
+[![License Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Godoc](https://godoc.org/github.com/gilbsgilbs/glloq?status.svg)](https://pkg.go.dev/github.com/gilbsgilbs/glloq)
+[![Actions Status](https://github.com/gilbsgilbs/glloq/workflows/Test/badge.svg)](https://github.com/gilbsgilbs/glloq/actions)
+[![Coverage Status](https://coveralls.io/repos/github/gilbsgilbs/glloq/badge.svg?branch=master)](https://coveralls.io/github/gilbsgilbs/glloq?branch=master)
+
 # Glloq
 
 Glloq is a simple command line utility and Go library that lets you take an advisory lock on
