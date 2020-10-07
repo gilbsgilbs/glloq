@@ -1,7 +1,6 @@
 package main_test
 
 import (
-	"runtime"
 	"testing"
 
 	"github.com/gilbsgilbs/glloq"
@@ -14,13 +13,6 @@ func TestCli(t *testing.T) {
 		"GLLOQ_DSN=file://.lock",
 		"GLLOQ_POLL_DELAY=1",
 		"GLLOQ_TIMEOUT=5",
-	}
-
-	var sleep []string
-	if runtime.GOOS == "windows" {
-		sleep = []string{"timeout"}
-	} else {
-		sleep = []string{"sleep"}
 	}
 
 	t.Run("test DSN not set", func(t *testing.T) {
@@ -39,25 +31,20 @@ func TestCli(t *testing.T) {
 		go func() {
 			if _, err := cmd.RunGlloq(
 				env,
-				append(sleep, "5"),
+				[]string{"sleep", "5"},
 			); err != nil {
 				panic(err)
 			}
 		}()
 
-		exitCode, err := cmd.RunGlloq(env, append(sleep, "1"))
+		exitCode, err := cmd.RunGlloq(env, []string{"sleep", "1"})
 
 		assert.Equal(t, 0, exitCode)
 		assert.Nil(t, err)
 	})
 
 	t.Run("forwards errors", func(t *testing.T) {
-		var cmdArgs []string
-		if runtime.GOOS == "windows" {
-			cmdArgs = []string{"exit", "22"}
-		} else {
-			cmdArgs = []string{"sh", "-c", "exit 22"}
-		}
+		cmdArgs := []string{"sh", "-c", "exit 22"}
 
 		exitCode, err := cmd.RunGlloq(env, cmdArgs)
 
