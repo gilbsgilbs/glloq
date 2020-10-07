@@ -1,8 +1,16 @@
 # Glloq
 
-Glloq is a simple command line utility and gorm library that lets you
-take an advisory lock before running some action. This is especially useful
-when you want to avoid running database migrations (for example) concurrently.
+Glloq is a simple command line utility and Go library that lets you take an advisory lock on
+various backends before running some action. This is especially useful when you want to avoid
+running database migrations (for example) concurrently.
+
+Officially supported backends currently include:
+
+- PostgreSQL and derivatives (CockroachDB, …)
+- MySQL and derivatives (MariaDB, …)
+- Local files
+
+but you can very easily implement your own.
 
 ## Usage
 
