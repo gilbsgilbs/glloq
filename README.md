@@ -22,16 +22,20 @@ but you can very easily implement your own.
 ### As a CLI
 
 ```bash
-# Supported DSNs include PostgreSQL (CockroachDB, ...), MySQL (Maria, ...), Files.
-export GLLOQ_DSN=postgres://user:password@postgres:5432/mydb?sslmode=disable
+# By default, glloq will use a ".glloq" lock file in the current working directory.
+glloq sleep 10 &
+glloq echo ok  # This displays "ok" in 10 seconds
+
+# Supported backends include PostgreSQL (CockroachDB, ...), MySQL (Maria, ...) and local files.
+export GLLOQ_DSN="postgres://user:password@postgres:5432/mydb?sslmode=disable"
 
 # This wont run concurrently
-glloq run_migrations.sh
+glloq run_db_migrations.sh
 
-# Override default timeout of 60 seconds to 10 minutes.
+# You can override default timeout of 1 minute to 10 minutes.
 export GLLOQ_TIMEOUT=600
 
-# You can specify a lock ID (if the back-end supports it)
+# You can specify a lock key (if supported by the backend).
 GLLOQ_KEY=concurrent0 glloq run_migrations_0.sh
 GLLOQ_KEY=concurrent1 glloq run_migrations_1.sh
 ```

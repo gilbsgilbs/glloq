@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"os"
 	"os/exec"
-	"path"
 	"strconv"
 	"strings"
 	"time"
@@ -39,9 +38,7 @@ func RunGlloq(env []string, args []string) (int, error) {
 
 	dsn := opts["dsn"]
 	if dsn == "" {
-		// No DSN set, just use a static file.
-		tmpdir := os.TempDir()
-		dsn = "file://" + path.Join(tmpdir, "glloq-edw3KBE")
+		dsn = "file://.glloq"
 	}
 	timeoutSeconds, _ := strconv.Atoi(opts["timeout"])
 	lockerOptions := glloq.Options{
