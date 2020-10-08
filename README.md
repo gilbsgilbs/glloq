@@ -24,7 +24,7 @@ but you can very easily implement your own.
 ```bash
 # By default, glloq will use a ".glloq" lock file in the current working directory.
 glloq sleep 10 &
-glloq echo ok  # This displays "ok" in 10 seconds
+glloq echo ok  # This displays "ok" after 10 seconds
 
 # Supported backends include PostgreSQL (CockroachDB, ...), MySQL (Maria, ...) and local files.
 export GLLOQ_DSN="postgres://user:password@postgres:5432/mydb?sslmode=disable"
