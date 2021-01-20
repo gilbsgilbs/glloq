@@ -131,6 +131,8 @@ github.com/theckman/go-flock v0.8.0 h1:h0ssvtvRY44GJyWJW9cZhahYVVnLVaAhlB8H/4TOt
 github.com/theckman/go-flock v0.8.0/go.mod h1:kjuth3y9VJ2aNlkNEO99G/8lp9fMIKaGyBmh84IBheM=
 github.com/xo/dburl v0.0.0-20200910011426-652e0d5720a3 h1:WchQs0yWhP3iA3CFE57fmCltE5dx5FkbUZOJZBjEtJ8=
 github.com/xo/dburl v0.0.0-20200910011426-652e0d5720a3/go.mod h1:TM8VMBT+LWqC3MBOulZjb8FAthcvZq0t/qvDLwS6skU=
+github.com/xo/dburl v0.3.0 h1:KGkeJB/oQhY/DeeJoYl/1+pNE/JnF6ouAuA8nzpQEQ8=
+github.com/xo/dburl v0.3.0/go.mod h1:TM8VMBT+LWqC3MBOulZjb8FAthcvZq0t/qvDLwS6skU=
 github.com/zenazn/goji v0.9.0/go.mod h1:7S9M489iMyHBNxwZnk9/EHS098H4/F6TATF2mIxtB1Q=
 go.uber.org/atomic v1.3.2/go.mod h1:gD2HeocX3+yG+ygLZcrzQJaqmWj9AIm7n08wl/qW/PE=
 go.uber.org/atomic v1.4.0/go.mod h1:gD2HeocX3+yG+ygLZcrzQJaqmWj9AIm7n08wl/qW/PE=
