@@ -9,5 +9,5 @@ require (
 	github.com/lib/pq v1.10.2
 	github.com/stretchr/testify v1.7.0
 	github.com/theckman/go-flock v0.8.0
-	github.com/xo/dburl v0.7.0
+	github.com/xo/dburl v0.8.0
 )
