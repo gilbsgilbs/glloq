@@ -8,6 +8,6 @@ require (
 	github.com/gofrs/flock v0.8.0 // indirect
 	github.com/lib/pq v1.10.2
 	github.com/stretchr/testify v1.7.0
-	github.com/theckman/go-flock v0.8.0
-	github.com/xo/dburl v0.8.0
+	github.com/theckman/go-flock v0.8.1
+	github.com/xo/dburl v0.8.4
 )
