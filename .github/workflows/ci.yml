@@ -52,8 +52,6 @@ jobs:
 
       - name: Lint
         uses: golangci/golangci-lint-action@v2
-        with:
-          version: v1.40
 
       - name: Test
         # Quotes for "-coverprofile=cover.out" are required for Windows because of the "." in the argument name.
