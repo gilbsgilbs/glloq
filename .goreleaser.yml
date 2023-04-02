@@ -4,11 +4,19 @@ before:
 
 builds:
   - env:
-    - CGO_ENABLED=0
+      - CGO_ENABLED=0
     goos:
-    - linux
-    - windows
-    - darwin
+      - darwin
+      - freebsd
+      - linux
+      - windows
+    goarch:
+      - amd64
+      - arm
+      - arm64
+    goarm:
+      - 6
+      - 7
     main: ./cmd/main.go
 
 dockers:
@@ -20,12 +28,14 @@ dockers:
     - "gilbsgilbs/glloq:latest"
 
 archives:
-  - replacements:
-      darwin: Darwin
-      linux: Linux
-      windows: Windows
-      386: i386
-      amd64: x86_64
+  - name_template: >-
+      {{ .ProjectName }}_
+      {{- .Version }}_
+      {{- title .Os }}_
+      {{- if eq .Arch "amd64" }}x86_64
+      {{- else if eq .Arch "386" }}i386
+      {{- else }}{{ .Arch }}{{ if .Arm }}v{{ .Arm }}{{ end }}
+      {{- end }}
 
 checksum:
   name_template: 'checksums.txt'
