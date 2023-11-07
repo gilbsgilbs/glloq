@@ -123,8 +123,8 @@ github.com/stretchr/testify v1.8.4 h1:CcVxjf3Q8PM0mHUKJCdn+eZZtm5yQwehR5yeSVQQcU
 github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
 github.com/theckman/go-flock v0.8.1 h1:kTixuOsFBOtGYSTLRLWK6GOs1hk/8OD11sR1pDd0dl4=
 github.com/theckman/go-flock v0.8.1/go.mod h1:kjuth3y9VJ2aNlkNEO99G/8lp9fMIKaGyBmh84IBheM=
-github.com/xo/dburl v0.17.0 h1:sUgx24FNMbdxjutH6r4eg4y5S75RMjb/C+eGqnttcqU=
-github.com/xo/dburl v0.17.0/go.mod h1:B7/G9FGungw6ighV8xJNwWYQPMfn3gsi2sn5SE8Bzco=
+github.com/xo/dburl v0.17.1 h1:n8jpWqYwe8TJQ1n8OvJuKDP9GxnPS+52T/xQtjADTIM=
+github.com/xo/dburl v0.17.1/go.mod h1:B7/G9FGungw6ighV8xJNwWYQPMfn3gsi2sn5SE8Bzco=
 github.com/yuin/goldmark v1.4.13/go.mod h1:6yULJ656Px+3vBD8DxQVa3kxgyrAnzto9xy5taEt/CY=
 github.com/zenazn/goji v0.9.0/go.mod h1:7S9M489iMyHBNxwZnk9/EHS098H4/F6TATF2mIxtB1Q=
 go.uber.org/atomic v1.3.2/go.mod h1:gD2HeocX3+yG+ygLZcrzQJaqmWj9AIm7n08wl/qW/PE=
