@@ -33,7 +33,7 @@ jobs:
           --health-retries 5
 
       mysql:
-        image: mysql:8
+        image: mysql:9
         env:
           MYSQL_USER: glloq_user
           MYSQL_PASSWORD: glloq_password
